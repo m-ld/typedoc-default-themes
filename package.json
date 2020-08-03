@@ -12,7 +12,7 @@
     "clean": "rimraf bin",
     "grunt": "grunt",
     "build": "npm run clean && npm run grunt",
-    "prepublish": "npm run build && npm version $VERSION && git push"
+    "prepublishOnly": "npm run build && npm version $VERSION && git push"
   },
   "repository": {
     "type": "git",

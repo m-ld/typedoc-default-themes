@@ -15,10 +15,12 @@
 <nav class="tsd-navigation secondary">
     <ul>
         {{#if settings.readmeToc}}
+            <p class="nav-label">Contents</p>
             {{#each settings.readmeToc}}
-                {{> toc}}
+                {{> toc readme=true}}
             {{/each}}
-            <hr>
+            <br>
+            <p class="nav-label">Types</p>
         {{/if}}
         {{#each toc.children}}
             {{> toc}}

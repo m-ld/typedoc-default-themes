@@ -1,9 +1,9 @@
 <li class="{{#if isInPath}}current{{/if}} {{cssClasses}}">
-    <a href="{{relativeURL url}}" class="tsd-kind-icon">{{{wbr title}}}</a>
+    <a href="{{relativeURL url}}" class="{{#unless readme}}tsd-kind-icon{{/unless}}">{{{wbr title}}}</a>
     {{#if children}}
         <ul>
             {{#each children}}
-                {{> toc}}
+                {{> toc readme=../readme}}
             {{/each}}
         </ul>
     {{/if}}
